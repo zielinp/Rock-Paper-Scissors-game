@@ -3,12 +3,15 @@ import styled from "styled-components";
 import Score from "./score";
 
 const StyledBox = styled.div`
+  /* position: absolute; */
   padding: 2rem;
   border: 2px solid white;
   border-radius: 1rem;
   display: flex;
   justify-content: space-between;
   width: 60%;
+  /* margin: auto; */
+  /* top: 2rem; */
   div {
     display: flex;
     justify-content: flex-start;

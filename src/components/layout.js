@@ -1,5 +1,6 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,600&display=swap');
@@ -22,6 +23,16 @@ body{
     --rockSecondaryColor: hsl(349, 70%, 56%);
     --rockShadowColor: hsl(349, 71%, 32%);
 
+    --scissorsPrimaryColor:hsl(39, 89%, 49%);
+    --scissorsSecondaryColor:hsl(40, 84%, 53%);
+    --scissorsShadowColor:hsl(39, 89%, 29%);
+
+    --paperPrimaryColor:hsl(230, 89%, 62%);
+    --paperSecondaryColor:hsl(230, 89%, 65%);
+    --paperShadowColor: hsl(230, 89%, 35%);
+
+   
+
 p{
     margin: 0;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -38,11 +49,22 @@ p{
 }
 `;
 
+const StyledContainer = styled.div`
+  height: 100vh;
+  border: 1px solid red;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
 function Layout({ children }) {
   return (
     <>
       <GlobalStyle />
-      {children}
+      <StyledContainer>{children}</StyledContainer>
     </>
   );
 }

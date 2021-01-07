@@ -17,6 +17,11 @@ body{
     --scoreTextColor: hsl(229, 64%, 46%);
     --headerOutlineColor: hsl(217, 16%, 45%);
 
+    /* colors */
+    --rockPrimaryColor: hsl(349, 71%, 52%);
+    --rockSecondaryColor: hsl(349, 70%, 56%);
+    --rockShadowColor: hsl(349, 71%, 32%);
+
 p{
     margin: 0;
     font-family: 'Barlow Semi Condensed', sans-serif;

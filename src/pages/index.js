@@ -1,4 +1,6 @@
 import * as React from "react";
+import Figure from "../components/figure";
+import GameBoard from "../components/gameboard";
 import Header from "../components/header";
 import Layout from "../components/layout";
 
@@ -7,6 +9,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Header></Header>
+      <GameBoard></GameBoard>
     </Layout>
   );
 };

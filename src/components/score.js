@@ -10,9 +10,12 @@ const StyledScoreBox = styled.div`
     p:nth-of-type(1) {
       text-transform: uppercase;
       color: var(--scoreTextColor);
+      font-size: 0.75rem;
+      font-weight: bold;
     }
     p:nth-of-type(2) {
       color: var(--darkTextColor);
+      font-size: 2.5rem;
     }
   }
 `;

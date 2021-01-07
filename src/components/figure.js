@@ -9,19 +9,14 @@ const StyledFigure = styled.div.attrs((props) => ({
 }))`
   width: 10rem;
   height: 10rem;
-  /* border: 1.25rem solid ${(props) => props.color}; */
-
   border-radius: 50%;
   background-color: white;
-
   background: linear-gradient(
     to top left,
     ${(props) => props.primaryColor} 0%,
     ${(props) => props.secondaryColor} 100%
   );
-  /* box-shadow: 0 8px var(--rockShadowColor); */
   box-shadow: 0 8px ${(props) => props.shadowColor};
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,9 +63,18 @@ const StyledImgBox = styled.div`
   align-items: center;
 `;
 
-function Figure({ shadowColor, primaryColor, secondaryColor, figureImg }) {
+function Figure({
+  shadowColor,
+  primaryColor,
+  secondaryColor,
+  figureImg,
+  onClick,
+  name,
+}) {
   return (
     <StyledFigure
+      name={name}
+      onClick={onClick}
       shadowColor={shadowColor}
       primaryColor={primaryColor}
       secondaryColor={secondaryColor}

@@ -33,7 +33,7 @@ body{
 
    
 
-p{
+p, a{
     margin: 0;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }

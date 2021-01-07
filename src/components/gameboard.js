@@ -42,26 +42,21 @@ const StyledBackground = styled.div`
   }
 `;
 
-function GameBoard({}) {
+function GameBoard({ handleRock, handlePaper, handleScissors }) {
   return (
     <StyledGameBoard>
-      {/* <Figure
-        shadowColor={"var(--rockShadowColor)"}
-        primaryColor={"var(--rockPrimaryColor)"}
-        secondaryColor={"var(--rockSecondaryColor)"}
-        figureImg={rock}
-      ></Figure> */}
       <StyledBackground>
-        {" "}
-        {/* <img src={triangle} /> */}
         <div>
           <Figure
+            name={"ROCK"}
+            onClick={handleRock}
             shadowColor={"var(--rockShadowColor)"}
             primaryColor={"var(--rockPrimaryColor)"}
             secondaryColor={"var(--rockSecondaryColor)"}
             figureImg={rock}
           ></Figure>
           <Figure
+            onClick={handlePaper}
             shadowColor={"var(--paperShadowColor)"}
             primaryColor={"var(--paperPrimaryColor)"}
             secondaryColor={"var(--paperSecondaryColor)"}
@@ -70,6 +65,7 @@ function GameBoard({}) {
         </div>
         <div>
           <Figure
+            onClick={handleScissors}
             shadowColor={"var(--scissorsShadowColor)"}
             primaryColor={"var(--scissorsPrimaryColor)"}
             secondaryColor={"var(--scissorsSecondaryColor)"}

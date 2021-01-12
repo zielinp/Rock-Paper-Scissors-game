@@ -65,18 +65,66 @@ const StyledButton = styled.a`
   }
 `;
 
-function ScoreBoard({ handlePlayAgain, userFigure }) {
-  const [randomFigure, setRandomFigure] = useState("");
+function ScoreBoard({ handlePlayAgain, userFigure, randomFigure, point }) {
+  // const [randomFigure, setRandomFigure] = useState("");
+  // const [point, setPoint] = useState(0);
 
-  function getRandomFigure() {
-    let figures = ["PAPER", "SCISSORS", "ROCK"];
-    let randomFigure = Math.floor(Math.random() * figures.length);
-    setRandomFigure(figures[randomFigure]);
-  }
+  // function getRandomFigure() {
+  //   let figures = ["PAPER", "SCISSORS", "ROCK"];
+  //   let randomFigure = Math.floor(Math.random() * figures.length);
+  //   setRandomFigure(figures[randomFigure]);
+  // }
 
-  useEffect(() => {
-    getRandomFigure();
-  }, []);
+  // rules
+  // let point = 0;
+
+  // function givePoint() {
+  //   alert(point);
+  //   let info = "";
+  //   if (
+  //     (userFigure === "ROCK" && randomFigure === "PAPER") ||
+  //     (userFigure === "ROCK" && randomFigure === "ROCK")
+  //   ) {
+  //     // point = 0;
+  //     setPoint(point + 0);
+  //     info = "You lost";
+  //   } else if (userFigure === "ROCK" && randomFigure === "SCISSORS") {
+  //     // point += 1;
+  //     setPoint(point + 1);
+  //     info = "You win";
+  //   } else if (
+  //     (userFigure === "PAPER" && randomFigure === "SCISSORS") ||
+  //     (userFigure === "PAPER" && randomFigure === "PAPER")
+  //   ) {
+  //     setPoint(point + 0);
+  //     // point = 0;
+  //     info = "You lost";
+  //   } else if (userFigure === "PAPER" && randomFigure === "ROCK") {
+  //     // point += 1;
+  //     setPoint(point + 1);
+  //     info = "You win";
+  //   } else if (
+  //     (userFigure === "SCISSORS" && randomFigure === "ROCK") ||
+  //     (userFigure === "SCISSORS" && randomFigure === "SCISSORS")
+  //   ) {
+  //     // point = 0;
+  //     setPoint(point + 0);
+  //     info = "You lost";
+  //   } else if (userFigure === "SCISSORS" && randomFigure === "PAPER") {
+  //     // point = 1;
+  //     setPoint(point + 1);
+  //     info = "You win";
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   getRandomFigure();
+  // }, []);
+
+  // useEffect(() => {
+  //   console.log("hej");
+  //   givePoint();
+  // }, [randomFigure]);
 
   return (
     <StyledScoreBoard>
@@ -109,7 +157,7 @@ function ScoreBoard({ handlePlayAgain, userFigure }) {
         )}
       </div>
       <div>
-        <p>{userFigure}</p>
+        <p>{point}</p>
         <StyledButton onClick={handlePlayAgain}>Play again</StyledButton>
       </div>
       <div>

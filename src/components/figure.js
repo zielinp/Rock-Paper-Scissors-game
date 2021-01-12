@@ -69,11 +69,9 @@ function Figure({
   secondaryColor,
   figureImg,
   onClick,
-  name,
 }) {
   return (
     <StyledFigure
-      name={name}
       onClick={onClick}
       shadowColor={shadowColor}
       primaryColor={primaryColor}

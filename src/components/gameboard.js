@@ -48,7 +48,6 @@ function GameBoard({ handleRock, handlePaper, handleScissors }) {
       <StyledBackground>
         <div>
           <Figure
-            name={"ROCK"}
             onClick={handleRock}
             shadowColor={"var(--rockShadowColor)"}
             primaryColor={"var(--rockPrimaryColor)"}
